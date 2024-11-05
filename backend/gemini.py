@@ -6,8 +6,9 @@ $ pip install google-generativeai
 
 import google.generativeai as genai
 import csv
+import streamlit as st
 import re
-
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 with open('backend/responses.csv', 'w', newline='',  encoding="utf-8") as file:
