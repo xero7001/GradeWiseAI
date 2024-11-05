@@ -4,8 +4,9 @@ from msrest.authentication import CognitiveServicesCredentials
 
 import time
 
+import streamlit as st
 
-# image to text API authentication
+AZURE_VISION_API_KEY = st.secrets["AZURE_VISION_API_KEY"]
 subscription_key_imagetotext = AZURE_VISION_API_KEY
 endpoint_imagetotext = "https://gradewise-ai-sih.cognitiveservices.azure.com/"
 computervision_client = ComputerVisionClient(
